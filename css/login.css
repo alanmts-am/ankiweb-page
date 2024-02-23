@@ -38,9 +38,22 @@ li a:hover {
   align-items: center;
 }
 
-.header-container h1 {
-  font-size: x-large;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 5px
 }
+
+.logo-container img {
+  width: 30px;
+}
+
+.logo-container h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+
 
 .form-container {
   display: flex;
