@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/login.css" />
+    <script src="js/login.js"></script>
     <title>Login - Ankiweb</title>
   </head>
   <body>
@@ -13,17 +14,17 @@
           <h1>AnkiWeb</h1>
           <img src="assets/logo.png" alt="ícone do anki">
         </div>
-        <button class="button">Sign Up</button>
+        <a href="https://ankiweb.net/account/register"><button class="button">Sign Up</button></a>
       </div>
     </header>
     <main>
       <div class="form-container">
-        <form action="https://www.google.com.br">
+        <form id="loginForm">
           <h1>Login</h1>
           <p>Log in to an existing account</p>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <input class="button" type="submit" value="Log in" disabled>
+          <input type="email" id="email" placeholder="Email" oninput="checkForm()" />
+          <input type="password" id="password" placeholder="Password" oninput="checkForm()"/>
+          <input class="button" type="submit" id="submit" value="Log in" onclick="send()" disabled>
           <a href="https://ankiweb.net/account/reset-password">Reset Password</a>
         </form>
       </div>
@@ -32,10 +33,10 @@
       <div class="footer-container">
         <ul>
           <li><a href="https://apps.ankiweb.net/">Apps</a></li>
-          <li><a href="https://apps.ankiweb.net/">About</a></li>
-          <li><a href="https://apps.ankiweb.net/">Support</a></li>
-          <li><a href="https://apps.ankiweb.net/">Privacy</a></li>
-          <li><a href="https://apps.ankiweb.net/">Terms</a></li>
+          <li><a href="https://ankiweb.net/about">About</a></li>
+          <li><a href="https://help.ankiweb.net/">Support</a></li>
+          <li><a href="https://ankiweb.net/account/terms">Terms</a></li>
+          <li><a href="https://ankiweb.net/account/privacy">Privacy</a></li>
         </ul>
       </div>
     </footer>
