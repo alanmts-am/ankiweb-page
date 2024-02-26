@@ -9,8 +9,12 @@ function checkForm(){
             submit.removeAttribute('disabled');
         }
     } else {
-        email.classList.add('input-error');
-        submit.setAttribute('disabled', 'true');
+        if (email.value.trim() === ''){
+            email.classList.remove('input-error');
+        } else {
+            email.classList.add('input-error');
+            submit.setAttribute('disabled', 'true');
+        }
     }
 }
 
